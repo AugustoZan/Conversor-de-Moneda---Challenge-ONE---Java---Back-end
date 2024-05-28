@@ -14,12 +14,11 @@ El proyecto consiste en que el programa le permita al usuario convertir el valor
 El proyecto utiliza 3 archivos .java:
 - **Main.java**: Este archivo se encarga de llamar a la clase **Convertidor.java** y es, por lo tanto, la forma que tiene el usuario de correr el proyecto.
 
-    public class Main {
-	    public static void main(String[] args) {
-        Convertidor convertir = new Convertidor();
-        convertir.menu();
-		}
-    }
+		public class Main {
+	   	 public static void main(String[] args) {
+       	 Convertidor convertir = new Convertidor();
+        	convertir.menu();
+		} }
 - **Convertidor.java**: Es una clase que tiene como atributos los valores de las monedas y la cantidad que el usuario quiere saber. Cuenta con dos tipos de funciones: 
 El primero es un menú, para que el usuario pueda elegir qué monedas quiere convertir o bien, para finalizar el programa. 
 
