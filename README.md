@@ -1,16 +1,18 @@
 #Conversor de monedas
+
 *El conversor de monedas fue un challenge de [Alura Latam](https://github.com/alura-es-cursos "Alura Latam"). 
 El proyecto consiste en que el programa le permita al usuario convertir el valor de una moneda a otra. Funciona a través del lenguaje de programación **Java** utilizando una API que almacena el valor de dichas monedas. *
 ## Características
+
 > - Cuenta con 5 tipos de monedas (USD, ARS, BRL, COP & MXN)
-- Un menú con 9 opciones. Permite convertir monedas latinoamericanas a dólares y viceversa. También permite terminar con el programa.
-- Cuenta con depuración para evitar errores en la obtención de valores de monedas del API y para evitar que el programa tire error sí el usuario ingresa un valor no correspondiente al programa.
+>- Un menú con 9 opciones. Permite convertir monedas latinoamericanas a dólares y viceversa. También permite terminar con el programa.
+>- Cuenta con depuración para evitar errores en la obtención de valores de monedas del API y para evitar que el programa tire error sí el usuario ingresa un valor no correspondiente al programa.
 
 
 ## Estructura
+
 El proyecto utiliza 3 archivos .java:
 - **Main.java**: Este archivo se encarga de llamar a la clase **Convertidor.java** y es, por lo tanto, la forma que tiene el usuario de correr el proyecto.
-
 
     public class Main {
 	    public static void main(String[] args) {
@@ -20,6 +22,7 @@ El proyecto utiliza 3 archivos .java:
     }
 - **Convertidor.java**: Es una clase que tiene como atributos los valores de las monedas y la cantidad que el usuario quiere saber. Cuenta con dos tipos de funciones: 
 El primero es un menú, para que el usuario pueda elegir qué monedas quiere convertir o bien, para finalizar el programa. 
+
 		public void menu() {
 			int opcion = 0;
         	do {
@@ -37,7 +40,9 @@ El primero es un menú, para que el usuario pueda elegir qué monedas quiere con
 				System.out.println("\n------------------------------------------");
 				//Continuación del código...
 				} while (opcion != 9);
+  
 El segundo son funciones que toman los valores de las monedas y las pasan hacia la moneda que el usuario eligió en el menú. Se le preguntan cuánto será el monto de la moneda que escogió y, de ahí, se imprime un mensaje donde se le muestra al usuario por pantalla el valor de la moneda al convertirla.
+
         public void dolarAPesoArg() {
 			Scanner leer = new Scanner(System.in);
 			System.out.println("Ingrese la cantidad de dólares");
@@ -52,6 +57,7 @@ El segundo son funciones que toman los valores de las monedas y las pasan hacia 
     
 
 - **ConvertidorRequest.java**: Esta clase  se conecta con la API y solicita los valores de las monedas para que **Convertidor.java** tome esos valores solicitados y los establezca en sus atributos.
+
        public static double obtenerValorDolar() {
 			try {
 				// URL de la API
